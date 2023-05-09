@@ -273,6 +273,8 @@ Route::any('/bc-api/{endpoint}', 'MainController@proxyBigCommerceAPIRequest')
   ->where('endpoint', 'v2\/.*|v3\/.*');
 ```
 
+For Laravel to recognize the MainController add `use App\Http\Controllers\MainController;` in the top of the file, below the other `use` statements.
+
 ### Create a controller to handle app install and load requests, proxy BC API
 You can see above that there are references to ‘MainController’.
 That is where we’ll put the logic that handles the OAuth handshake and stores the credentials generated for the store.
