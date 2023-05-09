@@ -142,7 +142,7 @@ php artisan make:migration create_bc_auth_table
 This command will generate a new migrations file in `./database/migrations`.
 Laravel will use the name of the migration command to attempt to guess the name of the table and whether or not the migration will be creating a new table. 
 If Laravel is able to determine the table name from the migration name, Laravel will pre-fill the generated migration file with the specified table. 
-It should be named something like this `2023_05_02_create_bc_auth_table.php`, open the file and let's add our columns.
+It should be named something like this `<timestamp>_create_bc_auth_table.php`, open the file and let's add our columns.
 
 Replace the `up()` function with the follwing:
 
@@ -167,7 +167,7 @@ You can find additional column types here ([Available Column Types](https://lara
 
 We can then attempt to create the database table:
 ```bash
-php artisan migrate --path=/database/migrations/2023_05_08_101405_create_bc_auth_table.php
+php artisan migrate --path=/database/migrations/<timestamp>_create_bc_auth_table.php
 ```
 
 If we log back into our MySQL server, we should now be able to see the table and columns created by the migration:
@@ -189,3 +189,4 @@ USE laravel_react_sample_app; SHOW COLUMNS FROM bc_auth;
 +--------------+---------------------+------+-----+---------+-------+
 ```
 
+## Create a model
