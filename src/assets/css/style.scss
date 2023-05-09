@@ -77,6 +77,20 @@ img {
 hr {
     margin: 1rem 0;
 }
+
+table {
+    table-layout: auto;
+    width: 100%;
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom-width: 1px;
+    padding: 1rem 1rem;
+    background: variables.$nord1;
+}
 /**
  * Utils
  */
