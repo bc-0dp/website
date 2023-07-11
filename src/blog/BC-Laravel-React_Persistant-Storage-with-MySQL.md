@@ -158,6 +158,7 @@ Replace the `up()` function with the follwing:
             $table->string('access_token', 255);
             $table->integer('timestamp');
             $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 ```
@@ -186,7 +187,23 @@ USE laravel_react_sample_app; SHOW COLUMNS FROM bc_auth;
 | access_token | varchar(255)        | NO   |     | NULL    |       |
 | timestamp    | int(11)             | NO   |     | NULL    |       |
 | created_at   | date                | NO   |     | NULL    |       |
+| updated_at   | date                | NO   |     | NULL    |       |
 +--------------+---------------------+------+-----+---------+-------+
 ```
 
 ## Create a model
+> Laravel includes Eloquent, an object-relational mapper (ORM) that makes it enjoyable to interact with your database. When using Eloquent, each database table has a corresponding "Model" that is used to interact with that table. In addition to retrieving records from the database table, Eloquent models allow you to insert, update, and delete records from the table as well.
+
+To create a new model execute the following command:
+
+```bash
+php artisan make:model BCAuth
+```
+
+We also need to make sure that our MainController can use our model.
+
+Open up `/app/Http/Controllers/MainController.php`, and add `use App\Models\BCAuth;` to the list of use clauses.
+
+
+
+note to self, we need those other users account information to support multi user.
