@@ -17,6 +17,11 @@ body {
     line-height: variables.$line-height;
 	background-color: variables.$nord0;
 	color: variables.$nord6;
+    padding: 1rem;
+}
+
+header {
+    border: 1px solid variables.$nord6;
 }
 
 a {
@@ -28,41 +33,68 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    /* height: 3.5rem; */
     width: 100%;
     background-color: variables.$nord0;
-    // color: variables.$nord6;
+    padding: 1rem 1rem 1.5rem 1rem;
 }
   
 nav > a {
     display: block;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
     color: variables.$nord6;
+    border: 1px solid white;
+    box-shadow: variables.$nord9 10px 10px 0px 0px;
+    margin: 0 1rem;
+
+    span {
+        display: inline-block;
+    
+        &::first-letter {
+            color: variables.$nord8;
+        }
+    }
 
 	&:hover {
 		background-color: variables.$nord3;
 	}
+
+    &:focus {
+    	background-color: variables.$nord7;
+
+        span::first-letter {
+                color: variables.$nord11;
+            }
+    }
 }
 
 main {
     max-width: 50rem;
-    margin: 0 auto;
-    padding: 3rem 2rem;
+    margin: .5rem auto;
+    // padding: .5rem 1.1em 1.2rem .5rem;
     min-height: 100vh;
+    border: 1px solid variables.$nord6;
 }
 
 h1, h2, h3 {
-    margin: 2rem 0 0.5rem;
+    padding: .5rem;
+    border: 1px solid #eceff4;
+    box-shadow: #81a1c1 10px 10px 0px 0px;
+    margin-right: 1.2rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
 }
 
 time {
-    margin: 0 0 2rem;
+    margin: 0 0 1.5rem .5rem;
     display: block;
 }
 
 p {
-    margin-bottom: 1rem;
+    margin: .5rem;
+    margin-bottom: 1.5rem;
+    padding: .5rem;
+    // border: 1px solid variables.$nord6;
 }
 
 ul {
